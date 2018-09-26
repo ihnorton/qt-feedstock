@@ -110,6 +110,7 @@ requirements:
     - bison                              # [linux]
     - flex                               # [linux]
     - gperf                              # [linux]
+    - nss                                # [linux]
     - m2-gperf                           # [win]
     - m2-bison                           # [win]
     - m2-flex                            # [win]

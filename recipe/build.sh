@@ -54,6 +54,9 @@ if [[ ${HOST} =~ .*linux.* ]]; then
     export CC=${GCC}
     export CXX=${GXX}
 
+    # work around broken bison: https://github.com/conda-forge/bison-feedstock/issues/7
+    export M4=${PREFIX}/bin/m4
+
     mkdir -p "${SRC_DIR}/openssl_hack"
     conda install -c https://repo.continuum.io/pkgs/main \
                   --no-deps --yes --copy --prefix "${SRC_DIR}/openssl_hack" \
